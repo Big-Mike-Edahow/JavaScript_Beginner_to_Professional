@@ -1,0 +1,44 @@
+<!-- inventory.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const inventory = [];
+        const item1 = {
+            name: "tablet",
+            model: "ipad",
+            cost: 650,
+            qty: 1
+        }
+        const item2 = {
+            name: "phone",
+            model: "android",
+            cost: 500,
+            qty: 11
+        }
+        const item3 = {
+            name: "computer",
+            model: "imac",
+            cost: 1000,
+            qty: 3
+        }
+
+        inventory.push(item1, item2, item3);
+        console.log(inventory);
+        console.log("Item: " + inventory[2].name);
+        console.log("Model: " + inventory[2].model);
+        console.log("Cost " + inventory[2].cost);
+        console.log("Quantity: " + inventory[2].qty);
+    </script>
+</body>
+
+</html>
+
