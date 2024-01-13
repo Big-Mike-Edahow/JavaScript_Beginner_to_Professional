@@ -1,0 +1,32 @@
+<!-- myTable.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myTable</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const myTable = [];
+        const rows = 4;
+        const cols = 7;
+        let counter = 0;
+        for (let y = 0; y < rows; y++) {
+            let tempTable = [];
+            for (let x = 0; x < cols; x++) {
+                counter++;
+                tempTable.push(counter);
+            }
+            myTable.push(tempTable);
+        }
+        console.table(myTable);
+
+    </script>
+</body>
+
+</html>
+

@@ -1,0 +1,27 @@
+<!-- myWork.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myWork</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const myWork = [];
+        for (let x = 1; x < 10; x++) {
+            let stat = x % 2 ? true : false;
+            let temp = {
+                name: `Lesson ${x}`, status: stat
+            };
+            myWork.push(temp);
+        }
+        console.log(myWork);
+    </script>
+</body>
+
+</html>
+
