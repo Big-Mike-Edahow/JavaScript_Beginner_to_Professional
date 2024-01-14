@@ -1,0 +1,35 @@
+<!-- immed_invoked_funtion.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immediately Invoked Functions</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let val = "1000";
+
+        (function () {
+            let val = "100"; // local scope variable
+            console.log(val);
+        })();
+
+        let result = (function () {
+            let val = "Laurence";
+            return val;
+        })();
+        console.log(result);
+        console.log(val);
+
+        (function (val) {
+            console.log(`My name is ${val}`);
+        })("Laurence");
+    </script>
+</body>
+
+</html>
+

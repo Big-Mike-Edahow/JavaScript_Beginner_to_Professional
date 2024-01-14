@@ -1,0 +1,28 @@
+<!-- recursive_function.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursive Function</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const main = function counter(i) {
+            console.log(i);
+            if (i < 10) {
+                return counter(i + 1);
+            }
+            return;
+        }
+
+        main(-10);
+
+    </script>
+</body>
+
+</html>
+

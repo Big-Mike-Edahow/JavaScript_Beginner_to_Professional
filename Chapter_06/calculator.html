@@ -1,0 +1,32 @@
+<!-- calculator.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let val1 = prompt("Enter the first number: ");
+        let val2 = prompt("Enter the second number: ");
+        let operation = prompt("Enter 1 to add, 2 to subtract");
+        function cal(a, b, op) {
+            if (op == "1") {
+                let sum = Number(a) + Number(b);
+                alert(val1 + " + " + val2 + " = " + sum);
+
+            } else {
+                let result = Number(a) - Number(b);
+                alert(val1 + " - " + val2 + " = " + result);
+            }
+        }
+        cal(val1, val2, operation);
+    </script>
+</body>
+
+</html>
+

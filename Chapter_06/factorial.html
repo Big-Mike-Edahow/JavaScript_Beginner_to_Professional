@@ -1,0 +1,28 @@
+<!-- factorial.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function calcFactorial(nr) {
+            console.log(nr);
+            if (nr === 0) {
+                return 1;
+            }
+            else {
+                return nr * calcFactorial(--nr);
+            }
+        }
+        console.log(calcFactorial(4));
+    </script>
+</body>
+
+</html>
+

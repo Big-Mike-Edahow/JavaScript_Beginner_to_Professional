@@ -1,0 +1,55 @@
+<!-- recursion.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function getRecursive(nr) {
+            console.log(nr);
+            getRecursive(--nr);
+        }
+
+        getRecursive(3);
+
+        function logRecursive(nr) {
+            console.log("Started function:", nr);
+            if (nr > 0) {
+                logRecursive(nr - 1);
+            } else {
+                console.log("done with recursion");
+            }
+            console.log("Ended function:", nr);
+        }
+
+        logRecursive(3);
+
+        function getRecursive(nr) {
+            console.log(nr);
+            if (nr > 0) {
+                getRecursive(--nr);
+            }
+        }
+
+        getRecursive(3);
+
+        function calcFactorial(nr) {
+            if (nr === 0) {
+                return 1;
+            } else {
+                return nr * calcFactorial(--nr);
+            }
+        }
+
+        console.log("The factorial of 7 is: " + calcFactorial(7));
+    </script>
+</body>
+
+</html>
+
