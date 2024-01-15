@@ -1,0 +1,37 @@
+<!-- employee_class.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Class</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        class Employee {
+            constructor(firstName, lastName, yearsWorked) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.yearsWorked = yearsWorked;
+            }
+        }
+        const person1 = new Employee("Laurence", "Svekis", 10);
+        const person2 = new Employee("Lauren", "Jensen", 5);
+        const person3 = new Employee("Mike", "Jackson", 1)
+        const workers = [person1, person2, person3];
+
+        Employee.prototype.details = function () {
+            return this.firstName + " " + this.lastName + " has worked here " + this.yearsWorked + " years";
+        }
+
+        workers.forEach((person) => {
+            console.log(person.details());
+        });
+    </script>
+</body>
+
+</html>
+

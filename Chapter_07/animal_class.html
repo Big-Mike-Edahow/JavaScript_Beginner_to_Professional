@@ -1,0 +1,38 @@
+<!-- animal_class.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Class</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        class Animal {
+            constructor(species, sounds) {
+                this.species = species;
+                this.sounds = sounds;
+            }
+            speak() {
+                console.log(this.species + " " + this.sounds);
+            }
+        }
+        Animal.prototype.eat = function () {
+            return this.species + " is eating";
+        }
+        let cat = new Animal("cat", "meow");
+        let dog = new Animal("dog", "bark");
+        cat.speak();
+        dog.speak();
+        console.log(cat.eat());
+        console.log(dog.eat());
+        console.log(cat);
+        console.log(dog);
+    </script>
+</body>
+
+</html>
+

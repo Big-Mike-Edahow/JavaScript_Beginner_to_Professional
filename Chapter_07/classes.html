@@ -1,0 +1,71 @@
+<!-- classes.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        class Dog {
+            constructor(dogName, weight, color, breed) {
+                this.dogName = dogName;
+                this.weight = weight;
+                this.color = color;
+                this.breed = breed;
+            }
+        }
+
+        let dog = new Dog("JavaScript", 2.4, "brown", "chihuahua");
+        console.log(dog.dogName, "is a", dog.breed, "and weighs", dog.weight, "kg.");
+
+        class Person {
+            constructor(firstname, lastname) {
+                this.firstname = firstname;
+                this.lastname = lastname;
+            }
+
+            greet() {
+                console.log("Hi there!");
+            }
+        }
+
+        let p = new Person("Maaike", "van Putten");
+        console.log("Hi", p.firstname, p.lastname);
+        p.greet();
+
+        class Vehicle {
+            constructor(color, currentSpeed, maxSpeed) {
+                this.color = color;
+                this.currentSpeed = currentSpeed;
+                this.maxSpeed = maxSpeed;
+            }
+
+            move() {
+                console.log("moving at", this.currentSpeed);
+            }
+
+            accelerate(amount) {
+                this.currentSpeed += amount;
+            }
+        }
+
+        class Motor extends Vehicle {
+            constructor(color, currentSpeed, maxSpeed, fuel) {
+                super(color, currentSpeed, maxSpeed);
+                this.fuel = fuel;
+            }
+        }
+
+        let motor = new Motor("Black", 0, 250, "gasoline");
+        console.log(motor.color);
+        motor.accelerate(50);
+        motor.move();
+    </script>
+</body>
+
+</html>
