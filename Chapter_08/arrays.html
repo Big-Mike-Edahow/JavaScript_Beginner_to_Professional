@@ -1,0 +1,52 @@
+<!-- arrays.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function printStuff(element, index) {
+            console.log("Printing stuff:", element, "on array position: ", index);
+        }
+
+        function checkString(element, index) {
+            return typeof element === "string";
+        }
+
+        let array = ["grapefruit", 4, "hello", 5.6, true];
+        
+        array.forEach(printStuff);
+
+        let filterArr = array.filter(checkString);
+        console.log(filterArr);
+
+        console.log(array.every(checkString));
+
+        array.copyWithin(0, 3, 5);
+
+        console.log(array);
+
+        let num_array = [1, 2, 3, 4];
+        let mapped_arr = num_array.map(x => x + 1);
+        console.log(mapped_arr);
+
+        let bb = ["so", "bye", "bye", "love"];
+        console.log(bb.lastIndexOf("bye"));
+        console.log(bb.lastIndexOf("hi"));
+
+        let letters = ["a", "b", "c"];
+        let x = letters.join();
+        console.log(x);
+
+        x = letters.join('-');
+        console.log(x);
+    </script>
+</body>
+
+</html>

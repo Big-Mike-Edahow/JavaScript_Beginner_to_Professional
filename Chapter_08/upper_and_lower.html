@@ -1,0 +1,48 @@
+<!-- upper_and_lower.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upper and Lower</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let s = "Hello";
+        console.log(
+            s.concat(" there!")
+                .toUpperCase()
+                .replace("THERE", "you")
+                .concat(" You're amazing!")
+        );
+
+        const val = "thIs will be capiTalized for each word";
+        function wordsCaps(str) {
+            str = str.toLowerCase();
+            const tempArr = [];
+            let words = str.split(" ");
+            words.forEach(word => {
+                let temp = word.slice(0, 1).toUpperCase() + word.slice(1);
+                tempArr.push(temp);
+            });
+            return tempArr.join(" ");
+        }
+        console.log(wordsCaps(val));
+
+        let value = "I love JavaScript";
+        value = value.toLowerCase();
+        let vowels = ["a", "e", "i", "o", "u"];
+        vowels.forEach((letter, index) => {
+            console.log(letter);
+            value = value.replaceAll(letter, index);
+        });
+        console.log(value);
+
+    </script>
+</body>
+
+</html>
+
