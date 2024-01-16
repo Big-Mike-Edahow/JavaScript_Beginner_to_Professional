@@ -1,0 +1,32 @@
+<!-- query_selector.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+</head>
+
+<body>
+    <div class="output"></div>
+    <div class="source"></div>
+
+    <script type="text/javascript">
+        const output = document.querySelector('.output');
+        const source = document.querySelector('.source');
+        output.textContent = "Hello World";
+        output.classList.add("pink");
+        output.id = "test_one";
+        output.style.backgroundColor = "pink";
+        source.classList.add("teal");
+        source.style.backgroundColor = "mediumspringgreen";
+        source.id = "test_two";
+        source.textContent = document.URL;
+        console.log(document.URL);
+    </script>
+</body>
+
+</html>
+

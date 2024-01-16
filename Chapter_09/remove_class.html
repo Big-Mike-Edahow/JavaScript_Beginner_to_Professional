@@ -1,0 +1,35 @@
+<!-- remove_class.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Class</title>
+    <style>
+        .square {
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+
+        .square.blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="shape" class="square blue"></div>
+
+    <button onclick="change()">Change!</button>
+    <script type="text/javascript">
+        function change() {
+            document.getElementById("shape").classList.remove("blue");
+        }
+    </script>
+</body>
+
+</html>
+

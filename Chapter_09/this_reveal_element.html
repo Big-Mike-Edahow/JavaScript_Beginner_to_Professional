@@ -1,0 +1,24 @@
+<!-- this.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Reveal Element</title>
+</head>
+
+<body>
+    <button onclick="reveal(this)">Click here!</button>
+
+    <script type="text/javascript">
+        function reveal(el) {
+            alert("Parent Element logged.");
+            console.log(el.parentElement);
+        }
+    </script>
+</body>
+
+</html>
+
