@@ -1,0 +1,37 @@
+<!-- key_event.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Event</title>
+</head>
+
+<body>
+
+    <body>
+        <div id="wrapper">JavaScript is fun!</div>
+        <input type="text" name="myNum1" onkeypress="numCheck()">
+        <input type="text" name="myNum2" onkeypress="numCheck2()">
+
+        <script type="text/javascript">
+            function numCheck() {
+                message("Number: " + !isNaN(event.key));
+                return !isNaN(event.key);
+            }
+
+            function numCheck2() {
+                message("Not a number: " + isNaN(event.key));
+                return isNaN(event.key);
+            }
+
+            function message(m) {
+                document.getElementById('wrapper').innerHTML = m;
+            }
+        </script>
+    </body>
+
+</html>
+

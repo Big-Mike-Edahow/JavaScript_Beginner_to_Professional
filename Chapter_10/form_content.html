@@ -1,0 +1,34 @@
+<!-- form_content.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Content</title>
+</head>
+
+<body>
+    <div id="welcome">Hi there!</div>
+    <form>
+        <input type="text" name="firstname" placeholder="First name" />
+        <input type="text" name="lastname" placeholder="Last name" />
+        <input type="button" onclick="sendInfo()" value="Submit" />
+    </form>
+    
+    <script type="text/javascript">
+        function sendInfo() {
+            console.dir(event);
+            let p = event.target.parentElement;
+            message("Welcome " + p.firstname.value + " " + p.lastname.value);
+        }
+
+        function message(m) {
+            document.getElementById("welcome").innerHTML = m;
+        }
+    </script>
+</body>
+
+</html>
+

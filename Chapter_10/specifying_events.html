@@ -1,0 +1,24 @@
+<!-- specifying_events.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specifying Events</title>
+</head>
+
+<body>
+    <a href="#" id="unique" onclick="magic()">Click here for magic!</a>
+
+    <script type="text/javascript">
+        document.getElementById("unique").onclick = function () { magic() };
+        document.getElementById("unique").addEventListener("click", magic);
+        document.getElementById("unique").addEventListener("click", function () { magic(arg1, arg2) });
+
+    </script>
+</body>
+
+</html>
+

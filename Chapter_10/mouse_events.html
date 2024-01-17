@@ -1,0 +1,24 @@
+<!-- mouse_events.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+</head>
+
+<body>
+    <div id="divvy" onmouseup="changeColor()" style="width: 100px; height: 100px; background-color: pink;">
+    </div>
+    
+    <script type="text/javascript">
+        function changeColor() {
+            document.getElementById("divvy").style.backgroundColor = "blue";
+        }
+    </script>
+</body>
+
+</html>
+
