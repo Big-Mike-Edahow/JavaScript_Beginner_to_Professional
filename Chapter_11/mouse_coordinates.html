@@ -1,0 +1,46 @@
+<!-- mouse_coordinates.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse XY Coordinates</title>
+    <style>
+        .holder {
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+            font-size: 1.5em;
+            font-weight: 600;
+            border: 2px solid black;
+            padding: 10px;
+            background-color: lightpink;
+        }
+
+        .active {
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="holder">
+        <div id="output"></div>
+    </div>
+
+    <script type="text/javascript">
+        const ele = document.querySelector(".holder");
+        ele.addEventListener("mouseover", (e) => { e.target.classList.add("active"); });
+        ele.addEventListener("mouseout", (e) => { e.target.classList.remove("active"); });
+        ele.addEventListener("mousemove", coordin);
+        function coordin() {
+            let html = "X:" + event.clientX + " | Y:" + event.clientY;
+            document.getElementById("output").innerHTML = html;
+        }
+    </script>
+</body>
+
+</html>
+

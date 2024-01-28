@@ -1,0 +1,37 @@
+<!-- keydown.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keydown</title>
+</head>
+
+<body>
+    <div class="output"></div>
+    <input type="text" name="myNum1">
+    <input type="text" name="myNum2">
+
+    <script type="text/javascript">
+        const eles = document.querySelectorAll("input");
+        const output = document.querySelector(".output");
+        eles.forEach(el => {
+            el.addEventListener("keydown", (e) => {
+                if (!isNaN(e.key)) {
+                    output.textContent += e.key;
+                }
+            });
+            el.addEventListener("keyup", (e) => {
+                console.log(e.key);
+            });
+            el.addEventListener("paste", (e) => {
+                console.log('pasted');
+            });
+        });
+    </script>
+</body>
+
+</html>
+

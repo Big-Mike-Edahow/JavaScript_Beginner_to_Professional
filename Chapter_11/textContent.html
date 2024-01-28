@@ -1,0 +1,73 @@
+<!-- textContent.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textContent</title>
+    <style>
+        .hero-container {
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+            background-color: lightpink;
+            border: 2px solid black;
+            box-shadow: 5px 5px 5px black;
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin: 15px;
+            padding: 15px;
+            background-color: azure;
+            border: 2px solid black;
+            box-shadow: 5px 5px 5px black;
+        }
+
+        .center {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero-container">
+        <h1 class="center">JavaScript textContext!</h1>
+    </section>
+    <br>
+    <section class="grid-container">
+        <div>Red</div>
+        <div>Blue</div>
+        <div>Green</div>
+        <div>Yellow</div>
+    </section>
+
+    <script type="text/javascript">
+        const divs = document.querySelectorAll("div");
+        divs.forEach((el) => {
+            el.addEventListener("click", () => {
+                document.body.style.backgroundColor = el.textContent;
+            });
+        });
+    </script>
+</body>
+
+</html>

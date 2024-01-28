@@ -1,0 +1,67 @@
+<!-- move_block.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Block</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 2em;
+        }
+        div {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 150px;
+            font-size: 1.5em;
+            font-weight: 600;
+            text-shadow: 2px 2px 2px black;
+            background-color: lightsalmon;
+            border: 2px solid black;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px black;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Click Once to Move the Block! ⬛</h1>
+        <br>
+    </section>
+    <section>
+        <div id="block">Click Me!</div>
+    </section>
+
+    <script type="text/javascript">
+        const main = document.querySelector("#block");
+        let mover = { speed: 10, dir: 1, pos: 0 };
+        main.addEventListener("click", moveBlock);
+        function moveBlock() {
+            let x = 30;
+            setInterval(function () {
+                if (x < 1) {
+                    clearInterval();
+                } else {
+                    if (mover.pos > 800 || mover.pos < 0) {
+                        mover.dir *= -1;
+                    }
+                    x--;
+                    mover.pos += x * mover.dir;
+                    main.style.left = mover.pos + "px";
+                    console.log(mover.pos);
+                }
+            }, 2);
+        }
+    </script>
+</body>
+
+</html>
+
