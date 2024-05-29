@@ -1,0 +1,55 @@
+/* style.css */
+
+body {
+    background-color: aquamarine;
+}
+
+main {
+    margin: 30px;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+.error {
+    color: red;
+    font-size: 0.8em;
+    font-family: sans-serif;
+    font-style: italic;
+}
+
+input {
+    display: block;
+    width: 400px;
+    font-size: 1.3em;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+button {
+    font-size: 1.3em;
+    background-color: rgb(198, 216, 234);
+    border: 2px solid-black;
+    border-radius: 3px;
+}

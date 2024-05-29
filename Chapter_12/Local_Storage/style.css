@@ -1,0 +1,65 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: rgb(225, 207, 234);
+}
+
+main {
+    margin: 30px;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.hRule {
+    width: 480px;
+    height: 5px;
+    color: black;
+    background-color: black;
+}
+
+p {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.ready {
+    background-color: #ddd;
+    color: red;
+    text-decoration: line-through;
+}
+
+.label-text {
+    font-size: 1.3em;
+}
+
+input {
+    border-color: #ddd;
+    width: 400px;
+    display: block;
+    font-size: 1.2em;
+}
+
+button {
+    font-size: 1.3em;
+    margin: 2px;
+    padding: 2px;
+    background-color: rgb(198, 216, 234);
+    border: 2px solid-black;
+    border-radius: 3px;
+}
+
+.output {
+    font-size: 1.5em;
+    font-weight: 600;
+}
