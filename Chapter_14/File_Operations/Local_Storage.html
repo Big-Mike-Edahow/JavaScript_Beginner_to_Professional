@@ -1,0 +1,35 @@
+<!-- Local_Storage.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <style>
+        body {
+            background-color: rgb(222, 235, 200);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1 id="stored"></h1>
+        </section>
+    </main>
+    <script>
+        let message = "Hello from local storage!";
+        localStorage.setItem("example", message);
+
+        if (localStorage.getItem("example")) {
+            document.getElementById("stored").innerHTML =
+                localStorage.getItem("example");
+        }
+    </script>
+</body>
+
+</html>
+

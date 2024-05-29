@@ -1,0 +1,36 @@
+<!-- Upload_Files.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Files</title>
+    <style>
+        body {
+            background-color: rgb(236, 201, 201);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <input type="file" multiple onchange="uploadFile(this.files)" />
+            <div id="message"></div>
+        </section>
+    </main>
+    <script>
+        let message = document.getElementById("message");
+
+        function uploadFile(files) {
+            for (let i = 0; i < files.length; i++) {
+                message.innerHTML += files[i].name + "<br>";
+            }
+        }
+    </script>
+</body>
+
+</html>
+

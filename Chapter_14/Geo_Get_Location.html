@@ -1,0 +1,32 @@
+<!-- Geo_Get_Location.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo Get Location</title>
+    <style>
+        body {
+            background-color: rgb(233, 200, 207);
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        window.onload = init;
+
+        function init() {
+            navigator.geolocation.getCurrentPosition(showGeoPosition);
+        }
+
+        function showGeoPosition(data) {
+            console.dir(data);
+        }
+    </script>
+</body>
+
+</html>
+

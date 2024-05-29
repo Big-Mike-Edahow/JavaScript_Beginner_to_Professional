@@ -1,0 +1,38 @@
+<!-- Reading_File.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading File</title>
+    <style>
+        body {
+            background-color: rgb(227, 200, 200);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <input type="file" onchange="uploadFile(this.files)" />
+            <div id="message"></div>
+        </section>
+    </main>
+    <script>
+        let message = document.getElementById("message");
+
+        function uploadFile(files) {
+            let fr = new FileReader();
+            fr.onload = function (e) {
+                message.innerHTML = e.target.result;
+            };
+            fr.readAsText(files[0]);
+        }
+    </script>
+</body>
+
+</html>
+

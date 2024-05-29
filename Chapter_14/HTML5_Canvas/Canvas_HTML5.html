@@ -1,0 +1,39 @@
+<!-- Canvas_HTML5.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas HTML5</title>
+    <style>
+        body {
+            background-color: rgb(191, 222, 232);
+        }
+
+        #canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <canvas id="canvas" width="640" height="640">Not Supported</canvas>
+        </section>
+    </main>
+    <script>
+        const canvas = document.querySelector('#canvas');
+        const ctx = canvas.getContext("2d");
+        
+        ctx.fillStyle = "red";
+        ctx.fillRect(100, 100, 500, 300); //filled shape
+        ctx.strokeRect(90, 90, 520, 320); // outline
+        ctx.clearRect(150, 150, 400, 200); //transparent
+    </script>
+</body>
+
+</html>
+

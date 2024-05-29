@@ -1,0 +1,34 @@
+<!-- Canvas.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 5 Canvas</title>
+    <style>
+        canvas {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <canvas id="c1"></canvas>
+        </section>
+    </main>
+    <script>
+        let canvas = document.getElementById("c1");
+        let ctx = canvas.getContext("2d");
+        canvas.width = 500; //px
+        canvas.height = 500; //px
+        //ctx.fillStyle = "pink";
+        ctx.fillRect(20, 40, 100, 100);
+    </script>
+</body>
+
+</html>
+

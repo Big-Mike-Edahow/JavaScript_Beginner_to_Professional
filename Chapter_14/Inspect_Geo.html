@@ -1,0 +1,29 @@
+<!-- Inspect_Geo.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspect Geo</title>
+    <style>
+        body {
+            background-color: rgb(232, 220, 192);
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        window.onload = init;
+
+        function init() {
+            console.log("Geolocation details:")
+            console.dir(navigator.geolocation);
+        }
+    </script>
+</body>
+
+</html>
+

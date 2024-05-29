@@ -1,0 +1,35 @@
+<!-- Canvas_Circle.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Circle</title>
+    <style>
+        #canvas1 {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <canvas id="canvas1"></canvas>
+        </section>
+    </main>
+    <script>
+        let canvas = document.getElementById("canvas1");
+        let ctx = canvas.getContext("2d");
+        canvas.width = 150;
+        canvas.height = 200;
+        ctx.beginPath();
+        ctx.arc(75, 100, 50, 0, 2 * Math.PI);
+        ctx.stroke();
+    </script>
+</body>
+
+</html>
+

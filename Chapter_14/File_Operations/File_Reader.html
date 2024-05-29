@@ -1,0 +1,29 @@
+<!-- File_Reader.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Reader</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1 id="message"></h1>
+        </section>
+    </main>
+    <script>
+        let message = document.getElementById("message");
+        if (window.FileReader) {
+            message.innerText = "Good to go!";
+        } else {
+            message.innerText = "No FileReader :(";
+        }
+    </script>
+</body>
+
+</html>
+
